@@ -1,6 +1,6 @@
 import { Plugin } from './plugin/Plugin';
 import type { PropertyPrefixes } from './propertyPrefixes';
-import { prefixedProperties } from './util/prefixProperty';
+import { addVendorPrefixes } from './util/addVendorPrefixes';
 
 export const prefixer = (
   plugins: Plugin[],
@@ -12,7 +12,7 @@ export const prefixer = (
     let prefixedNames = [];
 
     if (propertyPrefixes[property]) {
-      prefixedNames.push(...prefixedProperties(property, propertyPrefixes[property]));
+      prefixedNames.push(...addVendorPrefixes(property, propertyPrefixes[property]));
     }
 
     prefixedNames.push(property);

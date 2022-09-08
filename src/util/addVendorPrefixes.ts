@@ -1,7 +1,7 @@
 import { CSSVendorBitmask } from '../CSSVendorBitmask';
 import { vendorPrefixes } from './vendorPrefixes';
 
-export const prefixedProperties = (property: string, bitmask: CSSVendorBitmask) => {
+export const addVendorPrefixes = (property: string, bitmask: CSSVendorBitmask) => {
   let toReturn: string[] = [];
 
   Object.keys(vendorPrefixes).forEach((vendor) => {
