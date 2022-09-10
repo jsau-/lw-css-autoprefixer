@@ -11,5 +11,5 @@ export const backgroundClip: Plugin = (property, value) => {
     return;
   }
 
-  return addVendorPrefixes(value, Vendor.wk).map(v => [property, v]);
+  return addVendorPrefixes(property, Vendor.all).map(prefixedProperty => [prefixedProperty, value]);
 }

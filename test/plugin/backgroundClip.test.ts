@@ -11,7 +11,9 @@ describe('plugin/backgroundClip', () => {
 
   it('Prefixes background-clip: text', () => {
     expect(backgroundClip('background-clip', 'text')).toEqual([
-      ['background-clip', '-webkit-text'],
+      ['-moz-background-clip', 'text'],
+      ['-ms-background-clip', 'text'],
+      ['-webkit-background-clip', 'text'],
     ]);
   });
 });

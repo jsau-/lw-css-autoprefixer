@@ -52,21 +52,23 @@ export const prefixer = (
 ) => (property: string, value: string): CSSDeclaration[] => {
   let toReturn: [string, string][] = [];
 
-  if (propertyPrefixes[property]) {
-    const prefixedNames = addVendorPrefixes(property, propertyPrefixes[property]);
+  let prefixedNames: string[] = [];
 
-    toReturn = toReturn.concat(
-      prefixedNames.map(prefixedName => [prefixedName, value] as CSSDeclaration),
-    );
+  if (propertyPrefixes[property]) {
+    prefixedNames = addVendorPrefixes(property, propertyPrefixes[property]);
   }
 
-  for (const [pluginProperty, pluginValue] of toReturn.concat([[property, value]])) {
-    for (const plugin of plugins) {
+  for (const plugin of plugins) {
+    for (const [pluginProperty, pluginValue] of (toReturn.length ? toReturn : [[property, value]])) {
       toReturn = toReturn.concat(
         plugin(pluginProperty, pluginValue) || [],
       );
     }
   }
+
+  toReturn = toReturn.concat(
+    prefixedNames.map(prefixedName => [prefixedName, value] as CSSDeclaration),
+  );
 
   /*
    * Always return the provided values last, as these are what we're treating

@@ -15,7 +15,6 @@ describe('plugin/display', () => {
       ['display', '-moz-box'],
       ['display', '-ms-flexbox'],
       ['display', '-webkit-flex'],
-      ['display', 'flex'],
     ]);
   });
 
@@ -25,7 +24,6 @@ describe('plugin/display', () => {
       ['display', '-moz-inline-box'],
       ['display', '-ms-inline-flexbox'],
       ['display', '-webkit-inline-flex'],
-      ['display', 'inline-flex'],
     ]);
   });
 });

@@ -5,6 +5,7 @@ import type { Plugin } from '../prefixer';
 
 export const crossFade: Plugin = (property, value) => {
   if (
+    isVendorPrefixed(property) ||
     isVendorPrefixed(value) ||
     value.indexOf('cross-fade(') === -1
   ) {

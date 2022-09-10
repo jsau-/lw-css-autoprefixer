@@ -1,9 +1,13 @@
 import { Vendor } from '../Vendor';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
+import { isVendorPrefixed } from '../util/isVendorPrefixed';
 
-export const affectedProperties: Record<string, 1> = {
+export const propertiesThatPrefixProperty: Record<string, 1> = {
   'column-width': 1,
+};
+
+export const propertiesThatPrefixValue: Record<string, 1> = {
   height: 1,
   'max-height': 1,
   'max-width': 1,
@@ -13,7 +17,6 @@ export const affectedProperties: Record<string, 1> = {
 };
 
 export const valueReplacements: Record<string, 1> = {
-  'contain-floats': 1,
   'fill-available': 1,
   'fit-content': 1,
   'max-content': 1,
@@ -21,9 +24,25 @@ export const valueReplacements: Record<string, 1> = {
 };
 
 export const size: Plugin = (property, value) => {
-  if (!affectedProperties[property] || !valueReplacements[value]) {
-    return;
-  }
+  const shouldPrefixProperty = !!propertiesThatPrefixProperty[property];
+  const shouldPrefixValue = !!propertiesThatPrefixValue[property] && !!valueReplacements[value];
 
-  return addVendorPrefixes(value, Vendor.moz_wk).map((prefixedVal) => [property, prefixedVal]);
+  if (shouldPrefixProperty) {
+    return addVendorPrefixes(property, Vendor.moz_wk).map((prefixedProperty) => [prefixedProperty, value]);
+  } else if (shouldPrefixValue) {
+    if (isVendorPrefixed(value)) {
+      return;
+    }
+
+    /*
+     * Firefox uses `-moz-available`.
+     */
+    if (value === 'fill-available') {
+      return addVendorPrefixes('available', Vendor.moz)
+        .concat(addVendorPrefixes(value, Vendor.wk))
+        .map((prefixedVal) => [property, prefixedVal]);
+    }
+
+    return addVendorPrefixes(value, Vendor.moz_wk).map((prefixedVal) => [property, prefixedVal]);
+  }
 };

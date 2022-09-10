@@ -76,9 +76,17 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['backface-visibility', 'inherit'],
   ]],
   ['background-clip', 'inherit', [
-    ['-moz-background-clip', 'inherit'],
-    ['-webkit-background-clip', 'inherit'],
     ['background-clip', 'inherit'],
+  ]],
+  ['background-clip', 'text', [
+    ['-moz-background-clip', 'text'],
+    ['-ms-background-clip', 'text'],
+    ['-webkit-background-clip', 'text'],
+    ['background-clip', 'text'],
+  ]],
+  ['background-image', 'cross-fade(url(\'br.png\'),url(\'tr.png\'),75%)', [
+    ['background-image', '-webkit-cross-fade(url(\'br.png\'),url(\'tr.png\'),75%)'],
+    ['background-image', 'cross-fade(url(\'br.png\'),url(\'tr.png\'),75%)'],
   ]],
   ['background-origin', 'inherit', [
     ['-moz-background-origin', 'inherit'],
@@ -207,10 +215,87 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-webkit-column-width', 'inherit'],
     ['column-width', 'inherit'],
   ]],
+  /*
+   * TODO: This isn't correct, and we should really only be seeing the
+   * following here:
+   *
+   * ['-moz-column-width', '-moz-calc(100vh - 50px)'],
+   * ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
+   * ['column-width', 'calc(100vh - 50px)']
+   */
+  ['column-width', 'calc(100vh - 50px)', [
+    ['column-width', '-moz-calc(100vh - 50px)'],
+    ['column-width', '-webkit-calc(100vh - 50px)'],
+    ['-moz-column-width', '-moz-calc(100vh - 50px)'],
+    ['-webkit-column-width', '-moz-calc(100vh - 50px)'],
+    ['-moz-column-width', '-webkit-calc(100vh - 50px)'],
+    ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
+    ['column-width', 'calc(100vh - 50px)'],
+  ]],
+  ['column-width', 'fill-available', [
+    ['-moz-column-width', 'fill-available'],
+    ['-webkit-column-width', 'fill-available'],
+    ['column-width', 'fill-available'],
+  ]],
+  ['column-width', 'fit-content', [
+    ['-moz-column-width', 'fit-content'],
+    ['-webkit-column-width', 'fit-content'],
+    ['column-width', 'fit-content'],
+  ]],
+  ['column-width', 'max-content', [
+    ['-moz-column-width', 'max-content'],
+    ['-webkit-column-width', 'max-content'],
+    ['column-width', 'max-content'],
+  ]],
+  ['column-width', 'min-content', [
+    ['-moz-column-width', 'min-content'],
+    ['-webkit-column-width', 'min-content'],
+    ['column-width', 'min-content'],
+  ]],
   ['columns', 'inherit', [
     ['-moz-columns', 'inherit'],
     ['-webkit-columns', 'inherit'],
     ['columns', 'inherit'],
+  ]],
+  ['cursor', 'inherit', [
+    ['cursor', 'inherit'],
+  ]],
+  ['cursor', 'grab', [
+    ['cursor', '-moz-grab'],
+    ['cursor', '-webkit-grab'],
+    ['cursor', 'grab'],
+  ]],
+  ['cursor', 'grabbing', [
+    ['cursor', '-moz-grabbing'],
+    ['cursor', '-webkit-grabbing'],
+    ['cursor', 'grabbing'],
+  ]],
+  ['cursor', 'zoom-in', [
+    ['cursor', '-moz-zoom-in'],
+    ['cursor', '-webkit-zoom-in'],
+    ['cursor', 'zoom-in'],
+  ]],
+  ['cursor', 'zoom-out', [
+    ['cursor', '-moz-zoom-out'],
+    ['cursor', '-webkit-zoom-out'],
+    ['cursor', 'zoom-out'],
+  ]],
+  ['display', 'inherit', [
+    ['display', 'inherit'],
+  ]],
+  ['display', 'inline-flex', [
+    ['display', '-webkit-inline-box'],
+    ['display', '-moz-inline-box'],
+    ['display', '-ms-inline-flexbox'],
+    ['display', '-webkit-inline-flex'],
+    ['display', 'inline-flex'],
+  ]],
+  ['display', 'flex', [
+    ['display', '-webkit-box'],
+    ['display', '-moz-box'],
+    ['display', '-ms-flexbox'],
+    ['display', '-webkit-flex'],
+    ['display', 'flex'],
   ]],
   ['filter', 'inherit', [
     ['-webkit-filter', 'inherit'],
@@ -269,6 +354,34 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
   ['font-kerning', 'inherit', [
     ['-webkit-font-kerning', 'inherit'],
     ['font-kerning', 'inherit'],
+  ]],
+  ['height', '100%', [
+    ['height', '100%'],
+  ]],
+  ['height', 'calc(100vh - 50px)', [
+    ['height', '-moz-calc(100vh - 50px)'],
+    ['height', '-webkit-calc(100vh - 50px)'],
+    ['height', 'calc(100vh - 50px)'],
+  ]],
+  ['height', 'fill-available', [
+    ['height', '-moz-available'],
+    ['height', '-webkit-fill-available'],
+    ['height', 'fill-available'],
+  ]],
+  ['height', 'fit-content', [
+    ['height', '-moz-fit-content'],
+    ['height', '-webkit-fit-content'],
+    ['height', 'fit-content'],
+  ]],
+  ['height', 'max-content', [
+    ['height', '-moz-max-content'],
+    ['height', '-webkit-max-content'],
+    ['height', 'max-content'],
+  ]],
+  ['height', 'min-content', [
+    ['height', '-moz-min-content'],
+    ['height', '-webkit-min-content'],
+    ['height', 'min-content'],
   ]],
   ['hyphens', 'inherit', [
     ['-moz-hyphens', 'inherit'],
@@ -364,6 +477,118 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-ms-mask-type', 'inherit'],
     ['-webkit-mask-type', 'inherit'],
     ['mask-type', 'inherit'],
+  ]],
+  ['max-height', '100%', [
+    ['max-height', '100%'],
+  ]],
+  ['max-height', 'calc(100vh - 50px)', [
+    ['max-height', '-moz-calc(100vh - 50px)'],
+    ['max-height', '-webkit-calc(100vh - 50px)'],
+    ['max-height', 'calc(100vh - 50px)'],
+  ]],
+  ['max-height', 'fill-available', [
+    ['max-height', '-moz-available'],
+    ['max-height', '-webkit-fill-available'],
+    ['max-height', 'fill-available'],
+  ]],
+  ['max-height', 'fit-content', [
+    ['max-height', '-moz-fit-content'],
+    ['max-height', '-webkit-fit-content'],
+    ['max-height', 'fit-content'],
+  ]],
+  ['max-height', 'max-content', [
+    ['max-height', '-moz-max-content'],
+    ['max-height', '-webkit-max-content'],
+    ['max-height', 'max-content'],
+  ]],
+  ['max-height', 'min-content', [
+    ['max-height', '-moz-min-content'],
+    ['max-height', '-webkit-min-content'],
+    ['max-height', 'min-content'],
+  ]],
+  ['max-width', '100%', [
+    ['max-width', '100%'],
+  ]],
+  ['max-width', 'calc(100vh - 50px)', [
+    ['max-width', '-moz-calc(100vh - 50px)'],
+    ['max-width', '-webkit-calc(100vh - 50px)'],
+    ['max-width', 'calc(100vh - 50px)'],
+  ]],
+  ['max-width', 'fill-available', [
+    ['max-width', '-moz-available'],
+    ['max-width', '-webkit-fill-available'],
+    ['max-width', 'fill-available'],
+  ]],
+  ['max-width', 'fit-content', [
+    ['max-width', '-moz-fit-content'],
+    ['max-width', '-webkit-fit-content'],
+    ['max-width', 'fit-content'],
+  ]],
+  ['max-width', 'max-content', [
+    ['max-width', '-moz-max-content'],
+    ['max-width', '-webkit-max-content'],
+    ['max-width', 'max-content'],
+  ]],
+  ['max-width', 'min-content', [
+    ['max-width', '-moz-min-content'],
+    ['max-width', '-webkit-min-content'],
+    ['max-width', 'min-content'],
+  ]],
+  ['min-height', '100%', [
+    ['min-height', '100%'],
+  ]],
+  ['min-height', 'calc(100vh - 50px)', [
+    ['min-height', '-moz-calc(100vh - 50px)'],
+    ['min-height', '-webkit-calc(100vh - 50px)'],
+    ['min-height', 'calc(100vh - 50px)'],
+  ]],
+  ['min-height', 'fill-available', [
+    ['min-height', '-moz-available'],
+    ['min-height', '-webkit-fill-available'],
+    ['min-height', 'fill-available'],
+  ]],
+  ['min-height', 'fit-content', [
+    ['min-height', '-moz-fit-content'],
+    ['min-height', '-webkit-fit-content'],
+    ['min-height', 'fit-content'],
+  ]],
+  ['min-height', 'max-content', [
+    ['min-height', '-moz-max-content'],
+    ['min-height', '-webkit-max-content'],
+    ['min-height', 'max-content'],
+  ]],
+  ['min-height', 'min-content', [
+    ['min-height', '-moz-min-content'],
+    ['min-height', '-webkit-min-content'],
+    ['min-height', 'min-content'],
+  ]],
+  ['min-width', '100%', [
+    ['min-width', '100%'],
+  ]],
+  ['min-width', 'calc(100vh - 50px)', [
+    ['min-width', '-moz-calc(100vh - 50px)'],
+    ['min-width', '-webkit-calc(100vh - 50px)'],
+    ['min-width', 'calc(100vh - 50px)'],
+  ]],
+  ['min-width', 'fill-available', [
+    ['min-width', '-moz-available'],
+    ['min-width', '-webkit-fill-available'],
+    ['min-width', 'fill-available'],
+  ]],
+  ['min-width', 'fit-content', [
+    ['min-width', '-moz-fit-content'],
+    ['min-width', '-webkit-fit-content'],
+    ['min-width', 'fit-content'],
+  ]],
+  ['min-width', 'max-content', [
+    ['min-width', '-moz-max-content'],
+    ['min-width', '-webkit-max-content'],
+    ['min-width', 'max-content'],
+  ]],
+  ['min-width', 'min-content', [
+    ['min-width', '-moz-min-content'],
+    ['min-width', '-webkit-min-content'],
+    ['min-width', 'min-content'],
   ]],
   ['object-fit', 'inherit', [
     ['-webkit-object-fit', 'inherit'],
