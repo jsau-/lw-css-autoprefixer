@@ -1,7 +1,7 @@
 # lw-css-prefixer
 
 [![npm version](https://img.shields.io/npm/v/lw-css-prefixer.svg)](https://www.npmjs.com/package/lw-css-prefixer)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/lw-css-prefixer)](https://bundlephobia.com/package/lw-css-prefixer)]
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/lw-css-prefixer)](https://bundlephobia.com/package/lw-css-prefixer)
 [![build status](https://github.com/jsau-/lw-css-prefixer/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/jsau-/lw-css-prefixer/actions/workflows/ci.yml)
 [![npm downloads](https://img.shields.io/npm/dm/lw-css-prefixer.svg)](https://www.npmjs.com/package/lw-css-prefixer)
 
