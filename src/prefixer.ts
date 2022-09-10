@@ -50,16 +50,21 @@ export const prefixer = (
   plugins: Plugin[],
   propertyPrefixes: PropertyPrefixes,
 ) => (property: string, value: string): CSSDeclaration[] => {
-  const toReturn: [string, string][] = [];
+  let toReturn: [string, string][] = [];
 
   if (propertyPrefixes[property]) {
     const prefixedNames = addVendorPrefixes(property, propertyPrefixes[property]);
-    toReturn.push(...prefixedNames.map(prefixedName => [prefixedName, value] as CSSDeclaration));
+
+    toReturn = toReturn.concat(
+      prefixedNames.map(prefixedName => [prefixedName, value] as CSSDeclaration),
+    );
   }
 
-  for (const [pluginProperty, pluginValue] of [...toReturn, [property, value]]) {
+  for (const [pluginProperty, pluginValue] of toReturn.concat([[property, value]])) {
     for (const plugin of plugins) {
-      toReturn.push(...plugin(pluginProperty, pluginValue) || []);
+      toReturn = toReturn.concat(
+        plugin(pluginProperty, pluginValue) || [],
+      );
     }
   }
 
