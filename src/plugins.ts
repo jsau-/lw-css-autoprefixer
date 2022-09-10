@@ -3,7 +3,7 @@ import { calc } from './plugin/calc';
 import { crossFade } from './plugin/crossFade';
 import { cursor } from './plugin/cursor';
 import { display } from './plugin/display';
-import { filter } from './plugin/filter';
+import { size } from './plugin/size';
 
 /**
  * The set of all plugins this library offers.
@@ -14,5 +14,5 @@ export const plugins = [
   crossFade,
   cursor,
   display,
-  filter,
+  size,
 ];

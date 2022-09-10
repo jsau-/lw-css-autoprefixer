@@ -2,8 +2,6 @@ import { Vendor } from '../Vendor';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
 
-const prefixMask = Vendor.moz_webkit;
-
 const prefixableValues: Record<string, 1> = {
   'grab': 1,
   'grabbing': 1,
@@ -20,5 +18,5 @@ export const cursor: Plugin = (property, value) => {
     return;
   }
 
-  return addVendorPrefixes(value, prefixMask).map(v => [property, v]);
+  return addVendorPrefixes(value, Vendor.moz_wk).map(v => [property, v]);
 }

@@ -5,5 +5,5 @@
 export const vendorPrefixes = {
   moz: '-moz-',
   ms: '-ms-',
-  webkit: '-webkit-',
+  wk: '-webkit-',
 } as const;

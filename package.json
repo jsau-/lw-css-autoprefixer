@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
-    "lint": "eslint \"./src/**/*.ts\" --color",
+    "lint": "eslint \"./src/**/*.ts\" \"./test/**/*.ts\" --color",
+    "lint:fix": "eslint \"./src/**/*.ts\" \"./test/**/*.ts\" --color --fix",
     "test": "jest"
   },
   "repository": {

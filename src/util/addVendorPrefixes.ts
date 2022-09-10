@@ -12,7 +12,7 @@ import { vendorPrefixes } from './vendorPrefixes';
  * addVendorPrefixes('hello-world', Vendor.none);
  * ```
  *
- * @param toPrefix - The value which we want to prefix with relevant standard
+ * @param str - The value which we want to prefix with relevant standard
  * vendor prefixes.
  * @param bitmask - The bitmask denoting the set of vendors we want to apply
  * prefixes for.
@@ -20,13 +20,13 @@ import { vendorPrefixes } from './vendorPrefixes';
  * vendor prefixes (note that this does **not** include the provided unprefixed
  * string).
  */
-export const addVendorPrefixes = (toPrefix: string, bitmask: Vendor) => {
+export const addVendorPrefixes = (str: string, bitmask: Vendor) => {
   const toReturn: string[] = [];
 
   Object.keys(vendorPrefixes).forEach((vendor) => {
     if (bitmask & Vendor[vendor as keyof typeof vendorPrefixes]) {
       toReturn.push(
-        `${vendorPrefixes[vendor as keyof typeof vendorPrefixes]}${toPrefix}`
+        `${vendorPrefixes[vendor as keyof typeof vendorPrefixes]}${str}`
       );
     }
   });

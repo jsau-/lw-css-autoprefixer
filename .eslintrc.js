@@ -37,7 +37,7 @@ module.exports = {
     'max-classes-per-file': ['error', 1],
     'max-depth': 'error',
     'max-len': ['error', 120],
-    'max-nested-callbacks': ['error', 3],
+    'max-nested-callbacks': ['error', 4],
     'max-params': ['error', 4],
     'max-statements-per-line': ['error', { max: 1 }],
     'multiline-comment-style': ['error', 'starred-block'],

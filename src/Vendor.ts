@@ -17,7 +17,7 @@
  * // false
  * isNumberAffectedByVendor(numToTest, Vendor.moz);
  *
- * numToTest |= Vendor.moz;
+ * numToTest |= Vendor.mz;
  *
  * // true
  * isNumberAffectedByVendor(numToTest, Vendor.moz);
@@ -35,7 +35,7 @@ export enum Vendor {
   /**
    * Webkit, e.g. Google Chrome, Safari
    */
-  webkit = 1 << 3,
+  wk = 1 << 3,
   /**
    * No vendors
    */
@@ -51,9 +51,9 @@ export enum Vendor {
   /**
    * Mozilla and Webkit
    */
-  moz_webkit = Vendor.moz | Vendor.webkit,
+  moz_wk = Vendor.moz | Vendor.wk,
   /**
    * Microsoft and Webkit
    */
-  ms_webkit = Vendor.ms | Vendor.webkit,
+  ms_wk = Vendor.ms | Vendor.wk,
 }

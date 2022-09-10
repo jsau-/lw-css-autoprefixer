@@ -12,16 +12,16 @@ import { vendorPrefixes } from './vendorPrefixes';
  * isVendorPrefixed('-moz-hello-world');
  * ```
  *
- * @param property - Property to check to see if it begins with a standard
+ * @param str - Property to check to see if it begins with a standard
  * vendor prefix.
  * @returns Is the provided property prefixed with a standard vendor prefix?
  */
-export const isVendorPrefixed = (property: string) => {
+export const isVendorPrefixed = (str: string) => {
   const allPrefixes = Object.keys(vendorPrefixes).map(
-    (prefix) => vendorPrefixes[prefix as keyof typeof vendorPrefixes],
+    (pfx) => vendorPrefixes[pfx as keyof typeof vendorPrefixes],
   );
 
   const regexp = new RegExp(`^${allPrefixes.join('|')}`);
 
-  return regexp.test(property);
+  return regexp.test(str);
 };

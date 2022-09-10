@@ -15,7 +15,7 @@ describe('util/addVendorPrefixes', () => {
   });
 
   it('Adds webkit prefix', () => {
-    expect(addVendorPrefixes('foo', Vendor.webkit)).toEqual(['-webkit-foo']);
+    expect(addVendorPrefixes('foo', Vendor.wk)).toEqual(['-webkit-foo']);
   });
 
   it('Adds moz and ms prefixes', () => {
@@ -26,7 +26,7 @@ describe('util/addVendorPrefixes', () => {
   });
 
   it('Adds ms and webkit prefixes', () => {
-    expect(addVendorPrefixes('foo', Vendor.ms_webkit)).toEqual([
+    expect(addVendorPrefixes('foo', Vendor.ms_wk)).toEqual([
       '-ms-foo',
       '-webkit-foo',
     ]);

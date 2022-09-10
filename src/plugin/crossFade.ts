@@ -3,8 +3,6 @@ import { isVendorPrefixed } from '../util/isVendorPrefixed';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
 
-const prefixMask = Vendor.webkit;
-
 export const crossFade: Plugin = (property, value) => {
   if (
     isVendorPrefixed(value) ||
@@ -13,5 +11,5 @@ export const crossFade: Plugin = (property, value) => {
     return;
   }
 
-  return addVendorPrefixes(value, prefixMask).map((prefixedVal) => [property, prefixedVal]);
+  return addVendorPrefixes(value, Vendor.wk).map((prefixedVal) => [property, prefixedVal]);
 };
