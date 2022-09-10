@@ -1,8 +1,8 @@
-import { CSSVendorBitmask } from '../CSSVendorBitmask';
+import { Vendor } from '../Vendor';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
 
-const prefixMask = CSSVendorBitmask.moz_webkit;
+const prefixMask = Vendor.moz_webkit;
 
 const prefixableValues: Record<string, 1> = {
   'grab': 1,

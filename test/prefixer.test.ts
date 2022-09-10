@@ -1,4 +1,4 @@
-import { CSSVendorBitmask } from '../src/CSSVendorBitmask';
+import { Vendor } from '../src/Vendor';
 import { Plugin, prefixer } from '../src/prefixer';
 import { addVendorPrefixes } from '../src/util/addVendorPrefixes';
 
@@ -11,7 +11,7 @@ describe('prefixer', () => {
   });
 
   it('Adds prefixes according to static list', () => {
-    const pfx = prefixer([], { foo: CSSVendorBitmask.moz_ms });
+    const pfx = prefixer([], { foo: Vendor.moz_ms });
 
     expect(pfx('foo', 'bar')).toEqual([
       ['-moz-foo', 'bar'],
@@ -23,7 +23,7 @@ describe('prefixer', () => {
   it('Adds prefixes according to plugin functions', () => {
     const plugin: Plugin = (property, value) => addVendorPrefixes(
       property,
-      CSSVendorBitmask.moz,
+      Vendor.moz,
     ).map((prefixedProp) => [prefixedProp, value]);
 
     const pfx = prefixer([plugin], {});

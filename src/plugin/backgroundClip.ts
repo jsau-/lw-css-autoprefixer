@@ -1,8 +1,8 @@
-import { CSSVendorBitmask } from '../CSSVendorBitmask';
+import { Vendor } from '../Vendor';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
 
-const prefixMask = CSSVendorBitmask.webkit;
+const prefixMask = Vendor.webkit;
 
 export const backgroundClip: Plugin = (property, value) => {
   if (property !== 'background-clip') {
