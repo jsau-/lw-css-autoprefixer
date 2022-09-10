@@ -5,12 +5,12 @@ import { vendorPrefixes } from './vendorPrefixes';
  * used e.g. in a plugin to decide to skip any further work.
  *
  * @example ```ts
-   // false
-   isVendorPrefixed('hello-world');
-
-   // true
-   isVendorPrefixed('-moz-hello-world');
- ```
+ * // false
+ * isVendorPrefixed('hello-world');
+ *
+ * // true
+ * isVendorPrefixed('-moz-hello-world');
+ * ```
  *
  * @param property - Property to check to see if it begins with a standard
  * vendor prefix.

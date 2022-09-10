@@ -123,5 +123,5 @@ export const propertyPrefixes: PropertyPrefixes = {
   'wrap-flow': Vendor.ms,
   'wrap-margin': Vendor.ms,
   'wrap-through': Vendor.ms,
-  'writing-mode': Vendor.webkit
+  'writing-mode': Vendor.webkit,
 };

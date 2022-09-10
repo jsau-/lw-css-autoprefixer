@@ -8,20 +8,20 @@
  * bitwise operations yourself.
  *
  * @example ```ts
-   let numToTest = Vendor.none;
-
-   const isNumberAffectedByVendor = (num: number, vendor: Vendor) => {
-     return num & vendor;
-   };
-
-   // false
-   isNumberAffectedByVendor(numToTest, Vendor.moz);
-
-   numToTest |= Vendor.moz;
-
-   // true
-   isNumberAffectedByVendor(numToTest, Vendor.moz);
- ```
+ * let numToTest = Vendor.none;
+ *
+ * const isNumberAffectedByVendor = (num: number, vendor: Vendor) => {
+ *   return num & vendor;
+ * };
+ *
+ * // false
+ * isNumberAffectedByVendor(numToTest, Vendor.moz);
+ *
+ * numToTest |= Vendor.moz;
+ *
+ * // true
+ * isNumberAffectedByVendor(numToTest, Vendor.moz);
+ * ```
  */
 export enum Vendor {
   /**
@@ -56,4 +56,4 @@ export enum Vendor {
    * Microsoft and Webkit
    */
   ms_webkit = Vendor.ms | Vendor.webkit,
-};
+}

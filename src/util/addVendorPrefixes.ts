@@ -5,12 +5,12 @@ import { vendorPrefixes } from './vendorPrefixes';
  * Prefix a given string with vendor-specific prefixes.
  *
  * @example ```ts
-   // ['-moz-hello-world', '-ms-hello-world']
-   addVendorPrefixes('hello-world', Vendor.moz_ms);
-
-   // []
-   addVendorPrefixes('hello-world', Vendor.none);
- ```
+ * // ['-moz-hello-world', '-ms-hello-world']
+ * addVendorPrefixes('hello-world', Vendor.moz_ms);
+ *
+ * // []
+ * addVendorPrefixes('hello-world', Vendor.none);
+ * ```
  *
  * @param toPrefix - The value which we want to prefix with relevant standard
  * vendor prefixes.
@@ -21,7 +21,7 @@ import { vendorPrefixes } from './vendorPrefixes';
  * string).
  */
 export const addVendorPrefixes = (toPrefix: string, bitmask: Vendor) => {
-  let toReturn: string[] = [];
+  const toReturn: string[] = [];
 
   Object.keys(vendorPrefixes).forEach((vendor) => {
     if (bitmask & Vendor[vendor as keyof typeof vendorPrefixes]) {
