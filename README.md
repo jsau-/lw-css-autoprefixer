@@ -32,7 +32,8 @@ import { prefixer } from 'lw-css-prefixer';
  *
  * If you're particularly conscious of your own bundle size it may
  * be sensible to define your own property prefix and plugins list in
- * line with your own needs, only supporting the narrowest set possible.
+ * line with your own needs, only supporting the minimum required set
+ * of features.
  */
 import { plugins } from 'lw-css-prefixer';
 import { propertyPrefixes } from 'lw-css-prefixer';
@@ -58,7 +59,8 @@ import { prefixer } from 'lw-css-prefixer';
  *
  * If you're particularly conscious of your own bundle size it may
  * be sensible to define your own property prefix and plugins list in
- * line with your own needs, only supporting the narrowest set possible.
+ * line with your own needs, only supporting the minimum required set
+ * of features.
  */
 import { plugins } from 'lw-css-prefixer';
 import { propertyPrefixes } from 'lw-css-prefixer';
@@ -80,6 +82,13 @@ setup(React.createElement, prefixer(plugins, propertyPrefixes));
 * Firefox 17+
 * Safari 6+
 
+## Big missing features
+
+* `transition`
+* `grid`
+* Short-hand properties (currently only long-hand properties are
+supported)
+
 ## Contributing
 
 While contributions are appreciated, they may be rejected if not in line
@@ -91,18 +100,22 @@ requests made into `develop`.
 
 ### Useful Snippets
 
-```
-// Install dependencies
+```sh
+# Install dependencies
 npm ci
 
-// Run tests
+# Run tests
 npm run lint
 npm run test
 
-// Build the library
+# Build the library
 npm run build
 ```
 
 ## Feedback and Support
 
 For suggestions, issues, and/or support raise a GitHub issue!
+
+## Special Thanks
+
+* [inline-style-prefixer](https://github.com/robinweser/inline-style-prefixer) for inspiring a large part of this library.

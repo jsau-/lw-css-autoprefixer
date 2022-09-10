@@ -1,16 +1,8 @@
 import { Vendor } from '../Vendor';
-import { isVendorPrefixed } from '../util/isVendorPrefixed';
-import { addVendorPrefixes } from '../util/addVendorPrefixes';
-import type { Plugin } from '../prefixer';
+import { makeFunctionPlugin } from '../util/makeFunctionPlugin';
 
-export const crossFade: Plugin = (property, value) => {
-  if (
-    isVendorPrefixed(property) ||
-    isVendorPrefixed(value) ||
-    value.indexOf('cross-fade(') === -1
-  ) {
-    return;
-  }
-
-  return addVendorPrefixes(value, Vendor.wk).map((prefixedVal) => [property, prefixedVal]);
-};
+export const crossFade = makeFunctionPlugin(
+  Vendor.wk,
+  /cross-fade\(/g,
+  'cross-fade(',
+);

@@ -1,15 +1,8 @@
 import { Vendor } from '../Vendor';
-import { isVendorPrefixed } from '../util/isVendorPrefixed';
-import { addVendorPrefixes } from '../util/addVendorPrefixes';
-import type { Plugin } from '../prefixer';
+import { makeFunctionPlugin } from '../util/makeFunctionPlugin';
 
-export const calc: Plugin = (property, value) => {
-  if (
-    isVendorPrefixed(value) ||
-    value.indexOf('calc(') === -1
-  ) {
-    return;
-  }
-
-  return addVendorPrefixes(value, Vendor.moz_wk).map((prefixedVal) => [property, prefixedVal]);
-};
+export const calc = makeFunctionPlugin(
+  Vendor.moz_wk,
+  /calc\(/g,
+  'calc(',
+);
