@@ -1,5 +1,4 @@
-import { addVendorPrefixes } from '../util/addVendorPrefixes';
-import type { Plugin } from './Plugin';
+import type { Plugin } from '../prefixer';
 
 const replacements: Record<string, string[]> = {
   flex: ['-webkit-box', '-moz-box', '-ms-flexbox', '-webkit-flex', 'flex'],

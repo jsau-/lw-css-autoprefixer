@@ -1,28 +1,27 @@
-import { Plugin } from './plugin/Plugin';
 import type { PropertyPrefixes } from './propertyPrefixes';
 import { addVendorPrefixes } from './util/addVendorPrefixes';
+
+export type CSSDeclaration = [string, string];
+export type Plugin = (property: string, value: string) => [string, string][] | undefined;
 
 export const prefixer = (
   plugins: Plugin[],
   propertyPrefixes: PropertyPrefixes,
-) => ({
-  prefix: (property: string, value: string) => {
-    const toReturn = [];
+) => (property: string, value: string) => {
+  const toReturn: [string, string][] = [];
 
-    let prefixedNames = [];
+  if (propertyPrefixes[property]) {
+    const prefixedNames = addVendorPrefixes(property, propertyPrefixes[property]);
+    toReturn.push(...prefixedNames.map(prefixedName => [prefixedName, value] as CSSDeclaration));
+  }
 
-    if (propertyPrefixes[property]) {
-      prefixedNames.push(...addVendorPrefixes(property, propertyPrefixes[property]));
+  for (const [pluginProperty, pluginValue] of [...toReturn, [property, value]]) {
+    for (const plugin of plugins) {
+      toReturn.push(...plugin(pluginProperty, pluginValue) || []);
     }
+  }
 
-    prefixedNames.push(property);
+  toReturn.push([property, value]);
 
-    for (const propertyToPrefix of prefixedNames) {
-      for (const plugin of plugins) {
-        toReturn.push(...plugin(propertyToPrefix, value) || []);
-      }
-    }
-
-    toReturn.push(property, value);
-  },
-});
+  return toReturn;
+};

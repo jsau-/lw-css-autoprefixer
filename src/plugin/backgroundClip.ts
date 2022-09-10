@@ -1,6 +1,6 @@
 import { CSSVendorBitmask } from '../CSSVendorBitmask';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
-import type { Plugin } from './Plugin';
+import type { Plugin } from '../prefixer';
 
 const prefixMask = CSSVendorBitmask.webkit;
 

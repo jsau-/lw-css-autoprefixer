@@ -1,17 +1,17 @@
 import { CSSVendorBitmask } from '../CSSVendorBitmask';
-import { isPropertyVendorPrefixed } from '../util/isPropertyVendorPrefixed';
+import { isVendorPrefixed } from '../util/isVendorPrefixed';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
-import type { Plugin } from './Plugin';
+import type { Plugin } from '../prefixer';
 
 const prefixMask = CSSVendorBitmask.moz_webkit;
 
 export const calc: Plugin = (property, value) => {
   if (
-    !isPropertyVendorPrefixed(property) ||
+    isVendorPrefixed(value) ||
     value.indexOf('calc(') === -1
   ) {
-    return
+    return;
   }
 
-  return addVendorPrefixes(property, prefixMask).map((prefixedName) => [prefixedName, value]);
+  return addVendorPrefixes(value, prefixMask).map((prefixedVal) => [property, prefixedVal]);
 };
