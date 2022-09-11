@@ -1,39 +1,30 @@
 import { cursor } from '../../src/plugin/cursor';
+import { assertTestCases } from '../assertTestCases';
 
 describe('plugin/cursor', () => {
-  it('Does not prefix if property != cursor', () => {
-    expect(cursor('foo', 'grab')).toBeUndefined();
-  });
-
-  it('Does not prefix if irrelevant property', () => {
-    expect(cursor('cursor', 'inherit')).toBeUndefined();
-  });
-
-  it('Prefixes cursor:grab', () => {
-    expect(cursor('cursor', 'grab')).toEqual([
-      ['cursor', '-moz-grab'],
-      ['cursor', '-webkit-grab'],
-    ]);
-  });
-
-  it('Prefixes cursor:grabbing', () => {
-    expect(cursor('cursor', 'grabbing')).toEqual([
-      ['cursor', '-moz-grabbing'],
-      ['cursor', '-webkit-grabbing'],
-    ]);
-  });
-
-  it('Prefixes cursor:zoom-in', () => {
-    expect(cursor('cursor', 'zoom-in')).toEqual([
-      ['cursor', '-moz-zoom-in'],
-      ['cursor', '-webkit-zoom-in'],
-    ]);
-  });
-
-  it('Prefixes cursor:zoom-out', () => {
-    expect(cursor('cursor', 'zoom-out')).toEqual([
-      ['cursor', '-moz-zoom-out'],
-      ['cursor', '-webkit-zoom-out'],
-    ]);
-  });
+  assertTestCases(
+    cursor,
+    [
+      ['foo', 'bar', undefined],
+      ['cursor', 'inherit', undefined],
+      ['cursor', 'initial', undefined],
+      ['cursor', 'unset', undefined],
+      ['cursor', 'grab', [
+        ['cursor', '-moz-grab'],
+        ['cursor', '-webkit-grab'],
+      ]],
+      ['cursor', 'grabbing', [
+        ['cursor', '-moz-grabbing'],
+        ['cursor', '-webkit-grabbing'],
+      ]],
+      ['cursor', 'zoom-in', [
+        ['cursor', '-moz-zoom-in'],
+        ['cursor', '-webkit-zoom-in'],
+      ]],
+      ['cursor', 'zoom-out', [
+        ['cursor', '-moz-zoom-out'],
+        ['cursor', '-webkit-zoom-out'],
+      ]],
+    ],
+  );
 });

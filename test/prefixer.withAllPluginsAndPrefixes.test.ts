@@ -1,6 +1,7 @@
 import { plugins } from '../src/plugins';
 import { CSSDeclaration, prefixer } from '../src/prefixer';
 import { propertyPrefixes } from '../src/propertyPrefixes';
+import { assertTestCases } from './assertTestCases';
 
 const testCases: [property: string, value: string, expect: CSSDeclaration[]][] = [
   ['align-content', 'inherit', [
@@ -604,6 +605,11 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-ms-flex-flow', 'unset'],
     ['flex-flow', 'unset'],
   ]],
+  ['flex-flow', 'wrap', [
+    ['-webkit-flex-flow', 'wrap'],
+    ['-ms-flex-flow', 'wrap'],
+    ['flex-flow', 'wrap'],
+  ]],
   ['flex-grow', 'inherit', [
     ['-webkit-box-flex', 'inherit'],
     ['-webkit-flex-grow', 'inherit'],
@@ -1136,11 +1142,5 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
 
 describe('prefixer.withAllPluginsAndPrefixes', () => {
   const pfx = prefixer(plugins, propertyPrefixes);
-
-  test.each(testCases)(
-    'Asserting \'%s:%s\' outputs %j (at index %#)',
-    (property, value, expectation) => {
-      expect(pfx(property, value)).toEqual(expectation);
-    }
-  );
+  assertTestCases(pfx, testCases);
 });

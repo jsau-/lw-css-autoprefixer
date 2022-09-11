@@ -1,0 +1,115 @@
+import { flexFlow } from '../../src/plugin/flexFlow';
+import { assertTestCases } from '../assertTestCases';
+
+describe('plugin/flexFlow', () => {
+  assertTestCases(
+    flexFlow,
+    [
+      ['foo', 'bar', undefined],
+      ['flex-flow', 'auto', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'auto'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'auto'],
+      ]],
+      ['flex-flow', 'column', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'column'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'column'],
+      ]],
+      ['flex-flow', 'column-reverse', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'reverse'],
+        ['-webkit-flex-flow', 'column-reverse'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'reverse'],
+        ['-ms-flex-flow', 'column-reverse'],
+      ]],
+      ['flex-flow', 'column-reverse wrap', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'reverse'],
+        ['-webkit-flex-flow', 'column-reverse wrap'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'reverse'],
+        ['-ms-flex-flow', 'column-reverse wrap'],
+      ]],
+      ['flex-flow', 'initial', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'initial'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'initial'],
+      ]],
+      ['flex-flow', 'inherit', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'inherit'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'inherit'],
+      ]],
+      ['flex-flow', 'nowrap', [
+        ['-webkit-flex-flow', 'nowrap'],
+        ['-ms-flex-flow', 'nowrap'],
+      ]],
+      ['flex-flow', 'revert', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'revert'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'revert'],
+      ]],
+      ['flex-flow', 'revert-layer', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'revert-layer'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'revert-layer'],
+      ]],
+      ['flex-flow', 'row', [
+        ['-webkit-box-orient', 'horizontal'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'row'],
+        ['-moz-box-orient', 'horizontal'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'row'],
+      ]],
+      ['flex-flow', 'row-reverse', [
+        ['-webkit-box-orient', 'horizontal'],
+        ['-webkit-box-direction', 'reverse'],
+        ['-webkit-flex-flow', 'row-reverse'],
+        ['-moz-box-orient', 'horizontal'],
+        ['-moz-box-direction', 'reverse'],
+        ['-ms-flex-flow', 'row-reverse'],
+      ]],
+      ['flex-flow', 'row-reverse wrap', [
+        ['-webkit-box-orient', 'horizontal'],
+        ['-webkit-box-direction', 'reverse'],
+        ['-webkit-flex-flow', 'row-reverse wrap'],
+        ['-moz-box-orient', 'horizontal'],
+        ['-moz-box-direction', 'reverse'],
+        ['-ms-flex-flow', 'row-reverse wrap'],
+      ]],
+      ['flex-flow', 'unset', [
+        ['-webkit-box-orient', 'vertical'],
+        ['-webkit-box-direction', 'normal'],
+        ['-webkit-flex-flow', 'unset'],
+        ['-moz-box-orient', 'vertical'],
+        ['-moz-box-direction', 'normal'],
+        ['-ms-flex-flow', 'unset'],
+      ]],
+      ['flex-flow', 'wrap', [
+        ['-webkit-flex-flow', 'wrap'],
+        ['-ms-flex-flow', 'wrap'],
+      ]],
+    ],
+  );
+});

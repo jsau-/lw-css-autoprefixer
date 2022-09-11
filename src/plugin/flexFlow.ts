@@ -5,10 +5,10 @@ export const flexFlow: Plugin = (property, value) => {
     return;
   }
 
-  if (value === 'nowrap') {
+  if (value === 'nowrap' || value === 'wrap') {
     return [
-      ['-webkit-flex-flow', 'nowrap'],
-      ['-ms-flex-flow', 'nowrap'],
+      ['-webkit-flex-flow', value],
+      ['-ms-flex-flow', value],
     ];
   }
 
@@ -42,6 +42,4 @@ export const flexFlow: Plugin = (property, value) => {
     ['-moz-box-direction', boxDirection],
     ['-ms-flex-flow', value],
   ];
-
-  return [];
 };

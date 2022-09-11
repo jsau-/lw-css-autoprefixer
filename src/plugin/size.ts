@@ -1,7 +1,6 @@
 import { Vendor } from '../Vendor';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import type { Plugin } from '../prefixer';
-import { isVendorPrefixed } from '../util/isVendorPrefixed';
 
 export const propertiesThatPrefixProperty: Record<string, 1> = {
   'column-width': 1,
@@ -30,10 +29,6 @@ export const size: Plugin = (property, value) => {
   if (shouldPrefixProperty) {
     return addVendorPrefixes(property, Vendor.moz_wk).map((prefixedProperty) => [prefixedProperty, value]);
   } else if (shouldPrefixValue) {
-    if (isVendorPrefixed(value)) {
-      return;
-    }
-
     /*
      * Firefox uses `-moz-available`.
      */
