@@ -1,4 +1,4 @@
-import { Plugin } from '../prefixer';
+import type { Plugin } from '../prefixer';
 
 export const flexFlow: Plugin = (property, value) => {
   if (property !== 'flex-flow') {

@@ -1,4 +1,4 @@
-import { Plugin } from '../prefixer';
+import type { Plugin } from '../prefixer';
 import { addVendorPrefixes } from '../util/addVendorPrefixes';
 import { isVendorPrefixed } from '../util/isVendorPrefixed';
 import { Vendor } from '../Vendor';

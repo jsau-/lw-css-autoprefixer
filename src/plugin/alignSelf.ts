@@ -1,4 +1,4 @@
-import { Plugin } from '../prefixer';
+import type { Plugin } from '../prefixer';
 
 export const alignSelf: Plugin = (property, value) => {
   if (property !== 'align-self') {

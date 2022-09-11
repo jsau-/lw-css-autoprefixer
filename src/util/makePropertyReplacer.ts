@@ -1,4 +1,4 @@
-import { Plugin } from '../prefixer';
+import type { Plugin } from '../prefixer';
 
 export const makePropertyReplacer = (replacements: Record<string, string[]>): Plugin => (property, value) => {
   if (!replacements[property]) {
