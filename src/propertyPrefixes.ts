@@ -8,7 +8,6 @@ export type PropertyPrefixes = Record<string, Vendor>;
  */
 export const propertyPrefixes: PropertyPrefixes = {
   'align-content': Vendor.wk,
-  'align-self': Vendor.wk,
   'animation': Vendor.moz_wk,
   'animation-delay': Vendor.moz_wk,
   'animation-direction': Vendor.moz_wk,

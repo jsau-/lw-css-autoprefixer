@@ -1,4 +1,5 @@
 import { alignItems } from './plugin/alignItems';
+import { alignSelf } from './plugin/alignSelf';
 import { backgroundClip } from './plugin/backgroundClip';
 import { border } from './plugin/border';
 import { calc } from './plugin/calc';
@@ -24,6 +25,7 @@ import { size } from './plugin/size';
  */
 export const plugins = [
   alignItems,
+  alignSelf,
   backgroundClip,
   border,
   calc,
