@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662860761213" clover="3.2.0">
-  <project timestamp="1662860761213" name="All files">
-    <metrics statements="187" coveredstatements="187" conditionals="71" coveredconditionals="71" methods="33" coveredmethods="33" elements="291" coveredelements="291" complexity="0" loc="187" ncloc="187" packages="3" files="29" classes="29"/>
+<coverage generated="1662929450035" clover="3.2.0">
+  <project timestamp="1662929450035" name="All files">
+    <metrics statements="199" coveredstatements="199" conditionals="75" coveredconditionals="75" methods="34" coveredmethods="34" elements="308" coveredelements="308" complexity="0" loc="199" ncloc="199" packages="3" files="31" classes="31"/>
     <package name="src">
-      <metrics statements="46" coveredstatements="46" conditionals="7" coveredconditionals="7" methods="4" coveredmethods="4"/>
+      <metrics statements="48" coveredstatements="48" conditionals="7" coveredconditionals="7" methods="4" coveredmethods="4"/>
       <file name="Vendor.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/Vendor.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="26" count="11" type="cond" truecount="2" falsecount="0"/>
@@ -17,7 +17,7 @@
         <line num="58" count="11" type="stmt"/>
       </file>
       <file name="plugins.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugins.ts">
-        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -38,24 +38,26 @@
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
       </file>
       <file name="prefixer.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/prefixer.ts">
         <metrics statements="14" coveredstatements="14" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
         <line num="2" count="2" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
         <line num="52" count="5" type="stmt"/>
-        <line num="53" count="267" type="stmt"/>
-        <line num="55" count="267" type="stmt"/>
-        <line num="57" count="267" type="cond" truecount="1" falsecount="0"/>
-        <line num="58" count="108" type="stmt"/>
-        <line num="61" count="5262" type="stmt"/>
-        <line num="62" count="8112" type="cond" truecount="2" falsecount="0"/>
-        <line num="63" count="8112" type="stmt"/>
-        <line num="69" count="267" type="stmt"/>
-        <line num="70" count="208" type="stmt"/>
-        <line num="78" count="267" type="stmt"/>
-        <line num="80" count="267" type="stmt"/>
+        <line num="53" count="303" type="stmt"/>
+        <line num="55" count="303" type="stmt"/>
+        <line num="57" count="303" type="cond" truecount="1" falsecount="0"/>
+        <line num="58" count="107" type="stmt"/>
+        <line num="61" count="6580" type="stmt"/>
+        <line num="62" count="10149" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="10149" type="stmt"/>
+        <line num="69" count="303" type="stmt"/>
+        <line num="70" count="207" type="stmt"/>
+        <line num="78" count="303" type="stmt"/>
+        <line num="80" count="303" type="stmt"/>
       </file>
       <file name="propertyPrefixes.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/propertyPrefixes.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -64,20 +66,20 @@
       </file>
     </package>
     <package name="src.plugin">
-      <metrics statements="114" coveredstatements="114" conditionals="59" coveredconditionals="59" methods="19" coveredmethods="19"/>
+      <metrics statements="124" coveredstatements="124" conditionals="63" coveredconditionals="63" methods="20" coveredmethods="20"/>
       <file name="alignContent.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/alignContent.ts">
         <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="282" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="246" type="stmt"/>
+        <line num="4" count="318" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="282" type="stmt"/>
         <line num="8" count="36" type="stmt"/>
         <line num="15" count="36" type="stmt"/>
       </file>
       <file name="alignItems.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/alignItems.ts">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="298" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="266" type="stmt"/>
+        <line num="4" count="334" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="302" type="stmt"/>
         <line num="8" count="32" type="stmt"/>
         <line num="10" count="32" type="cond" truecount="3" falsecount="0"/>
         <line num="11" count="4" type="stmt"/>
@@ -86,8 +88,8 @@
       <file name="alignSelf.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/alignSelf.ts">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="346" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="314" type="stmt"/>
+        <line num="4" count="382" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="350" type="stmt"/>
         <line num="8" count="32" type="cond" truecount="3" falsecount="0"/>
         <line num="9" count="4" type="stmt"/>
         <line num="15" count="28" type="stmt"/>
@@ -97,8 +99,8 @@
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="362" type="cond" truecount="3" falsecount="0"/>
-        <line num="7" count="360" type="stmt"/>
+        <line num="6" count="398" type="cond" truecount="3" falsecount="0"/>
+        <line num="7" count="396" type="stmt"/>
         <line num="10" count="6" type="stmt"/>
       </file>
       <file name="border.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/border.ts">
@@ -124,8 +126,8 @@
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="383" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="371" type="stmt"/>
+        <line num="13" count="419" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="407" type="stmt"/>
         <line num="17" count="12" type="cond" truecount="1" falsecount="0"/>
         <line num="18" count="4" type="stmt"/>
         <line num="21" count="16" type="stmt"/>
@@ -134,8 +136,8 @@
         <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="9" count="383" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="377" type="stmt"/>
+        <line num="9" count="419" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="413" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
         <line num="15" count="6" type="cond" truecount="1" falsecount="0"/>
         <line num="16" count="2" type="stmt"/>
@@ -155,8 +157,8 @@
       <file name="flexDirection.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/flexDirection.ts">
         <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="397" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="379" type="stmt"/>
+        <line num="4" count="433" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="415" type="stmt"/>
         <line num="11" count="18" type="cond" truecount="5" falsecount="0"/>
         <line num="12" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
@@ -170,8 +172,8 @@
       <file name="flexFlow.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/flexFlow.ts">
         <metrics statements="11" coveredstatements="11" conditionals="15" coveredconditionals="15" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="445" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="416" type="stmt"/>
+        <line num="4" count="481" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="452" type="stmt"/>
         <line num="8" count="29" type="cond" truecount="3" falsecount="0"/>
         <line num="9" count="4" type="stmt"/>
         <line num="18" count="25" type="cond" truecount="2" falsecount="0"/>
@@ -193,8 +195,8 @@
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="9" count="501" type="cond" truecount="3" falsecount="0"/>
-        <line num="10" count="495" type="stmt"/>
+        <line num="9" count="537" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="531" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
         <line num="14" count="12" type="stmt"/>
       </file>
@@ -203,6 +205,22 @@
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="justifyContent.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/justifyContent.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="554" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="520" type="stmt"/>
+        <line num="8" count="34" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="15" count="32" type="stmt"/>
+        <line num="22" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="32" type="stmt"/>
+      </file>
+      <file name="justifySelf.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/justifySelf.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
       <file name="margin.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/margin.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -217,8 +235,8 @@
       <file name="position.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/position.ts">
         <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="4" count="508" type="cond" truecount="3" falsecount="0"/>
-        <line num="5" count="506" type="stmt"/>
+        <line num="4" count="593" type="cond" truecount="3" falsecount="0"/>
+        <line num="5" count="591" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
       </file>
       <file name="size.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/plugin/size.ts">
@@ -229,11 +247,11 @@
         <line num="9" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
-        <line num="26" count="549" type="stmt"/>
-        <line num="27" count="549" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="549" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="634" type="stmt"/>
+        <line num="27" count="634" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="634" type="cond" truecount="2" falsecount="0"/>
         <line num="30" count="18" type="stmt"/>
-        <line num="31" count="540" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="625" type="cond" truecount="1" falsecount="0"/>
         <line num="35" count="44" type="cond" truecount="1" falsecount="0"/>
         <line num="36" count="11" type="stmt"/>
         <line num="38" count="22" type="stmt"/>
@@ -247,20 +265,20 @@
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="23" count="11" type="stmt"/>
-        <line num="24" count="209" type="stmt"/>
-        <line num="26" count="209" type="stmt"/>
-        <line num="27" count="627" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="379" type="stmt"/>
-        <line num="34" count="209" type="stmt"/>
+        <line num="24" count="208" type="stmt"/>
+        <line num="26" count="208" type="stmt"/>
+        <line num="27" count="624" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="378" type="stmt"/>
+        <line num="34" count="208" type="stmt"/>
       </file>
       <file name="isVendorPrefixed.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/util/isVendorPrefixed.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="7" type="stmt"/>
         <line num="19" count="7" type="stmt"/>
-        <line num="20" count="2143" type="stmt"/>
-        <line num="21" count="6429" type="stmt"/>
-        <line num="24" count="2143" type="stmt"/>
-        <line num="26" count="2143" type="stmt"/>
+        <line num="20" count="2323" type="stmt"/>
+        <line num="21" count="6969" type="stmt"/>
+        <line num="24" count="2323" type="stmt"/>
+        <line num="26" count="2323" type="stmt"/>
       </file>
       <file name="makeFunctionPlugin.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/util/makeFunctionPlugin.ts">
         <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
@@ -268,17 +286,17 @@
         <line num="4" count="5" type="stmt"/>
         <line num="6" count="5" type="stmt"/>
         <line num="10" count="8" type="stmt"/>
-        <line num="11" count="1638" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="1625" type="stmt"/>
+        <line num="11" count="1782" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="1769" type="stmt"/>
         <line num="18" count="13" type="stmt"/>
         <line num="19" count="20" type="stmt"/>
       </file>
       <file name="makePropertyReplacer.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/util/makePropertyReplacer.ts">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="2214" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="2152" type="stmt"/>
-        <line num="8" count="110" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="3098" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="2996" type="stmt"/>
+        <line num="8" count="150" type="stmt"/>
       </file>
       <file name="vendorPrefixes.ts" path="/home/runner/work/lw-css-prefixer/lw-css-prefixer/src/util/vendorPrefixes.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
