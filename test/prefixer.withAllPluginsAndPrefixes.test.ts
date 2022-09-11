@@ -598,14 +598,10 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-webkit-column-width', 'inherit'],
     ['column-width', 'inherit'],
   ]],
-  /*
-   * TODO: This isn't correct, and we should really only be seeing the
-   * following here:
-   *
-   * ['-moz-column-width', '-moz-calc(100vh - 50px)'],
-   * ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
-   * ['column-width', 'calc(100vh - 50px)']
-   */
+  // TODO: This isn't correct; should only have the following
+  // ['-moz-column-width', '-moz-calc(100vh - 50px)'],
+  // ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
+  // ['column-width', 'calc(100vh - 50px)']
   ['column-width', 'calc(100vh - 50px)', [
     ['column-width', '-moz-calc(100vh - 50px)'],
     ['column-width', '-webkit-calc(100vh - 50px)'],
