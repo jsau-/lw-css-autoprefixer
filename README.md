@@ -118,3 +118,5 @@ For suggestions, issues, and/or support raise a GitHub issue!
 ## Special Thanks
 
 * [inline-style-prefixer](https://github.com/robinweser/inline-style-prefixer) for inspiring a large part of this library.
+
+* This project is tested using [Browserstack](https://www.browserstack.com/).
