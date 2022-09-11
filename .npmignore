@@ -30,6 +30,7 @@ chrome-user-data
 .eslintrc.js
 .gitattributes
 .gitignore
+docs/**/*
 jest.config.js
 package-lock.json
 tsconfig.json
