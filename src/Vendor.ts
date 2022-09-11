@@ -35,7 +35,7 @@ export enum Vendor {
   /**
    * Webkit, e.g. Google Chrome, Safari
    */
-  wk = 1 << 3,
+  wk = 1 << 2,
   /**
    * No vendors
    */
@@ -43,7 +43,7 @@ export enum Vendor {
   /**
    * All vendors
    */
-  all = ~(~0 << 4),
+  all = ~(~0 << 3),
   /**
    * Mozilla and Microsoft
    */

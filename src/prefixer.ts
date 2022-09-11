@@ -27,9 +27,9 @@ export type Plugin = (property: string, value: string) => CSSDeclaration[] | und
  * either use the defaults exported by this library, or provide your own.
  *
  * @example ```ts
- * import { plugins } from 'lw-css-prefixer';
+ * import { plugins } from 'lw-css-prefixer/dist/plugins';
  * import { prefixer } from 'lw-css-prefixer';
- * import { propertyPrefixes } from 'lw-css-prefixer';
+ * import { propertyPrefixes } from 'lw-css-prefixer/dist/propertyPrefixes';
  *
  * const pfx = prefixer(plugins, propertyPrefixes);
  *
