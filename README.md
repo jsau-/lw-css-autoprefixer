@@ -35,8 +35,8 @@ import { prefixer } from 'lw-css-prefixer';
  * line with your own needs, only supporting the minimum required set
  * of features.
  */
-import { plugins } from 'lw-css-prefixer';
-import { propertyPrefixes } from 'lw-css-prefixer';
+import { plugins } from 'lw-css-prefixer/dist/plugins';
+import { propertyPrefixes } from 'lw-css-prefixer/dist/propertyPrefixes';
 
 const pfx = prefixer(plugins, propertyPrefixes);
 
@@ -62,8 +62,8 @@ import { prefixer } from 'lw-css-prefixer';
  * line with your own needs, only supporting the minimum required set
  * of features.
  */
-import { plugins } from 'lw-css-prefixer';
-import { propertyPrefixes } from 'lw-css-prefixer';
+import { plugins } from 'lw-css-prefixer/dist/plugins';
+import { propertyPrefixes } from 'lw-css-prefixer/dist/propertyPrefixes';
 
 setup(React.createElement, prefixer(plugins, propertyPrefixes));
 ```
