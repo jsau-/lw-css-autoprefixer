@@ -52,9 +52,6 @@ export const propertyPrefixes: PropertyPrefixes = {
   'font-feature-settings': Vendor.moz_wk,
   'font-kerning': Vendor.wk,
   'hyphens': Vendor.all,
-
-  // TODO: Move justify-items, justify-self into plugins!
-
   'mask': Vendor.ms_wk,
   'mask-border': Vendor.ms_wk,
   'mask-border-mode': Vendor.ms_wk,

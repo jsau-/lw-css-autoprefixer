@@ -598,10 +598,12 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-webkit-column-width', 'inherit'],
     ['column-width', 'inherit'],
   ]],
-  // TODO: This isn't correct; should only have the following
-  // ['-moz-column-width', '-moz-calc(100vh - 50px)'],
-  // ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
-  // ['column-width', 'calc(100vh - 50px)']
+  /**
+   * TODO: This isn't correct; should only have the following
+   * ['-moz-column-width', '-moz-calc(100vh - 50px)'],
+   * ['-webkit-column-width', '-webkit-calc(100vh - 50px)'],
+   * ['column-width', 'calc(100vh - 50px)']
+   */
   ['column-width', 'calc(100vh - 50px)', [
     ['column-width', '-moz-calc(100vh - 50px)'],
     ['column-width', '-webkit-calc(100vh - 50px)'],
@@ -1077,6 +1079,86 @@ const testCases: [property: string, value: string, expect: CSSDeclaration[]][] =
     ['-moz-box-pack', 'unset'],
     ['-ms-flex-pack', 'unset'],
     ['justify-content', 'unset'],
+  ]],
+  ['justify-self', 'auto', [
+    ['-ms-grid-column-align', 'auto'],
+    ['justify-self', 'auto'],
+  ]],
+  ['justify-self', 'baseline', [
+    ['-ms-grid-column-align', 'baseline'],
+    ['justify-self', 'baseline'],
+  ]],
+  ['justify-self', 'center', [
+    ['-ms-grid-column-align', 'center'],
+    ['justify-self', 'center'],
+  ]],
+  ['justify-self', 'end', [
+    ['-ms-grid-column-align', 'end'],
+    ['justify-self', 'end'],
+  ]],
+  ['justify-self', 'first baseline', [
+    ['-ms-grid-column-align', 'first baseline'],
+    ['justify-self', 'first baseline'],
+  ]],
+  ['justify-self', 'flex-end', [
+    ['-ms-grid-column-align', 'flex-end'],
+    ['justify-self', 'flex-end'],
+  ]],
+  ['justify-self', 'flex-start', [
+    ['-ms-grid-column-align', 'flex-start'],
+    ['justify-self', 'flex-start'],
+  ]],
+  ['justify-self', 'inherit', [
+    ['-ms-grid-column-align', 'inherit'],
+    ['justify-self', 'inherit'],
+  ]],
+  ['justify-self', 'initial', [
+    ['-ms-grid-column-align', 'initial'],
+    ['justify-self', 'initial'],
+  ]],
+  ['justify-self', 'last baseline', [
+    ['-ms-grid-column-align', 'last baseline'],
+    ['justify-self', 'last baseline'],
+  ]],
+  ['justify-self', 'left', [
+    ['-ms-grid-column-align', 'left'],
+    ['justify-self', 'left'],
+  ]],
+  ['justify-self', 'normal', [
+    ['-ms-grid-column-align', 'normal'],
+    ['justify-self', 'normal'],
+  ]],
+  ['justify-self', 'right', [
+    ['-ms-grid-column-align', 'right'],
+    ['justify-self', 'right'],
+  ]],
+  ['justify-self', 'safe center', [
+    ['-ms-grid-column-align', 'safe center'],
+    ['justify-self', 'safe center'],
+  ]],
+  ['justify-self', 'self-end', [
+    ['-ms-grid-column-align', 'self-end'],
+    ['justify-self', 'self-end'],
+  ]],
+  ['justify-self', 'self-start', [
+    ['-ms-grid-column-align', 'self-start'],
+    ['justify-self', 'self-start'],
+  ]],
+  ['justify-self', 'start', [
+    ['-ms-grid-column-align', 'start'],
+    ['justify-self', 'start'],
+  ]],
+  ['justify-self', 'stretch', [
+    ['-ms-grid-column-align', 'stretch'],
+    ['justify-self', 'stretch'],
+  ]],
+  ['justify-self', 'unsafe center', [
+    ['-ms-grid-column-align', 'unsafe center'],
+    ['justify-self', 'unsafe center'],
+  ]],
+  ['justify-self', 'unset', [
+    ['-ms-grid-column-align', 'unset'],
+    ['justify-self', 'unset'],
   ]],
   ['margin-block-end', 'inherit', [
     ['-webkit-margin-after', 'inherit'],

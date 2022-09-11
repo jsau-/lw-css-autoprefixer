@@ -15,6 +15,7 @@ import { flexGrowShrink } from './plugin/flexGrowShrink';
 import { gradient } from './plugin/gradient';
 import { imageSet } from './plugin/imageSet';
 import { justifyContent } from './plugin/justifyContent';
+import { justifySelf } from './plugin/justifySelf';
 import { margin } from './plugin/margin';
 import { padding } from './plugin/padding';
 import { position } from './plugin/position';
@@ -43,6 +44,7 @@ export const plugins = [
   gradient,
   imageSet,
   justifyContent,
+  justifySelf,
   margin,
   padding,
   position,
