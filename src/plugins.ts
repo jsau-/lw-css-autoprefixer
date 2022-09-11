@@ -1,3 +1,4 @@
+import { alignContent } from './plugin/alignContent';
 import { alignItems } from './plugin/alignItems';
 import { alignSelf } from './plugin/alignSelf';
 import { backgroundClip } from './plugin/backgroundClip';
@@ -24,6 +25,7 @@ import { size } from './plugin/size';
  * properties for compatibility.
  */
 export const plugins = [
+  alignContent,
   alignItems,
   alignSelf,
   backgroundClip,
