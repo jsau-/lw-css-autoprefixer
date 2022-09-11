@@ -72,7 +72,6 @@ setup(React.createElement, prefixer(plugins, propertyPrefixes));
 
 * [Documentation](https://jsau-.github.io/lw-css-prefixer)
 * [Code Coverage Report](https://jsau-.github.io/lw-css-prefixer/coverage/lcov-report)
-* [Unit Test Report](https://jsau-.github.io/lw-css-prefixer/coverage/test_report.html)
 
 ## Intended Browser Support
 
