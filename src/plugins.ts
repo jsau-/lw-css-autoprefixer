@@ -1,3 +1,4 @@
+import { alignItems } from './plugin/alignItems';
 import { backgroundClip } from './plugin/backgroundClip';
 import { border } from './plugin/border';
 import { calc } from './plugin/calc';
@@ -17,9 +18,12 @@ import { position } from './plugin/position';
 import { size } from './plugin/size';
 
 /**
- * The set of all plugins this library offers.
+ * The set of all plugins this library offers, used to perform more complex
+ * modifications on properties and values, e.g. needing to assign entirely new
+ * properties for compatibility.
  */
 export const plugins = [
+  alignItems,
   backgroundClip,
   border,
   calc,
