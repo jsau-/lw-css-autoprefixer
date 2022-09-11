@@ -7,7 +7,7 @@
 
 **NOTE: This project is under active development and is _not_ considered
 stable for production use. Exposed APIs are liable to change in major
-ways before a 1.0.0 release.**
+ways before a 1.0.0 release. Expect issues if you use this in production.**
 
 A lightweight auto-prefixer for CSS properties and values. Intended for
 runtime use, e.g. in CSS-in-JS libraries where inclusion of a
@@ -79,7 +79,7 @@ setup(React.createElement, prefixer(plugins, propertyPrefixes));
 * Edge 12+
 * Chrome 17+
 * Firefox 17+
-* Safari 6+
+* Safari 7+
 
 ## Big missing features
 

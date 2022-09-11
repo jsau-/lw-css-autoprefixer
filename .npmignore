@@ -38,3 +38,4 @@ tsconfig.build.json
 src/**/*
 test/**/*
 .github/**/*
+typedoc.js
