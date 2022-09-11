@@ -86,8 +86,7 @@ setup(React.createElement, prefixer(plugins, propertyPrefixes));
 
 * `transition`
 * `grid`
-* Short-hand properties (currently only long-hand properties are
-supported)
+* Short-hand properties (likely missing a _ton_ of shorthand behaviors)
 
 ## Contributing
 
