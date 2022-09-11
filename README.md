@@ -79,7 +79,7 @@ setup(React.createElement, prefixer(plugins, propertyPrefixes));
 * Edge 12+
 * Chrome 17+
 * Firefox 17+
-* Safari 6+
+* Safari 7+
 
 ## Big missing features
 
