@@ -1,7 +1,7 @@
 import type { Plugin } from '../prefixer';
 
 export const justifyContent: Plugin = (property, value) => {
-  if (property !== 'justify-content') {
+  if (property !== 'justify-content' || !value || typeof value !== 'string') {
     return;
   }
 

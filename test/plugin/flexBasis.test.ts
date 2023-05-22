@@ -6,6 +6,9 @@ describe('plugin/flexBasis', () => {
     flexBasis,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['flex-basis', '1', [
         ['-webkit-flex-basis', '1'],
         ['-ms-flex-preferred-size', '1'],

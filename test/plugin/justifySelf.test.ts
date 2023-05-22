@@ -6,6 +6,9 @@ describe('plugin/justifySelf', () => {
     justifySelf,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['justify-self', 'auto', [['-ms-grid-column-align', 'auto']]],
       ['justify-self', 'baseline', [['-ms-grid-column-align', 'baseline']]],
       ['justify-self', 'center', [['-ms-grid-column-align', 'center']]],

@@ -6,6 +6,9 @@ describe('plugin/flexGrowShrink', () => {
     flexGrowShrink,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['flex-grow', '1', [
         ['-webkit-box-flex', '1'],
         ['-webkit-flex-grow', '1'],

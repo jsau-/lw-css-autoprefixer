@@ -10,6 +10,7 @@ export const makeFunctionPlugin = (
 ): Plugin => (property, value) => {
   if (
     isVendorPrefixed(value) ||
+    typeof value !== 'string' ||
     value.indexOf(functionLiteralToFirstBracket) === -1
   ) {
     return;

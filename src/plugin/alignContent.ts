@@ -1,4 +1,4 @@
-import type { Plugin } from '../prefixer';
+import type { CSSDeclaration, Plugin } from '../prefixer';
 
 export const alignContent: Plugin = (property, value) => {
   if (property !== 'align-content') {
@@ -12,8 +12,14 @@ export const alignContent: Plugin = (property, value) => {
     'space-between': 'justify',
   };
 
-  return [
+  const toReturn: CSSDeclaration[] = [
     ['-webkit-align-content', value],
-    ['-ms-flex-line-pack', linePackReplacements[value] || value],
+    ['-ms-flex-line-pack', value],
   ];
+
+  if (typeof value === 'string' && linePackReplacements[value]) {
+    toReturn[1][1] = linePackReplacements[value];
+  }
+
+  return toReturn;
 };

@@ -10,7 +10,7 @@ const prefixableValues: Record<string, 1> = {
 };
 
 export const cursor: Plugin = (property, value) => {
-  if (property !== 'cursor') {
+  if (typeof value !== 'string' || property !== 'cursor') {
     return;
   }
 

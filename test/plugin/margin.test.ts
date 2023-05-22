@@ -6,6 +6,9 @@ describe('plugin/margin', () => {
     margin,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['margin-block-end', 'foo', [['-webkit-margin-after', 'foo']]],
       ['margin-block-start', 'foo', [['-webkit-margin-before', 'foo']]],
       ['margin-inline-end', 'foo', [

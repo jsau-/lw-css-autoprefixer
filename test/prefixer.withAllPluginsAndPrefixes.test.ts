@@ -1,9 +1,9 @@
 import { plugins } from '../src/plugins';
-import { CSSDeclaration, prefixer } from '../src/prefixer';
+import { CSSDeclaration, CSSPropertyValue, prefixer } from '../src/prefixer';
 import { propertyPrefixes } from '../src/propertyPrefixes';
 import { assertTestCases } from './assertTestCases';
 
-const testCases: [property: string, value: string, expect: CSSDeclaration[]][] = [
+const testCases: [property: string, value: CSSPropertyValue, expect: CSSDeclaration[]][] = [
   ['align-content', 'auto', [
     ['-webkit-align-content', 'auto'],
     ['-ms-flex-line-pack', 'auto'],

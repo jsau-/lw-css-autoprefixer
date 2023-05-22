@@ -6,6 +6,9 @@ describe('plugin/alignItems', () => {
     alignItems,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['align-items', 'auto', [
         ['-webkit-box-align', 'auto'],
         ['-webkit-align-items', 'auto'],
