@@ -6,6 +6,9 @@ describe('plugin/border', () => {
     border,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['border-block-end', 'foo', [['-webkit-border-after', 'foo']]],
       ['border-block-end-color', 'foo', [['-webkit-border-after-color', 'foo']]],
       ['border-block-end-style', 'foo', [['-webkit-border-after-style', 'foo']]],

@@ -6,7 +6,7 @@ const replacements: Record<string, string[]> = {
 };
 
 export const display: Plugin = (property, value) => {
-  if (property !== 'display') {
+  if (typeof value !== 'string' || property !== 'display') {
     return;
   }
 

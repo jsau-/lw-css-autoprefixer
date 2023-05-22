@@ -6,6 +6,9 @@ describe('plugin/gradient', () => {
     gradient,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['background-image', 'linear-gradient(red, yellow)', [
         ['background-image', '-moz-linear-gradient(red, yellow)'],
         ['background-image', '-webkit-linear-gradient(red, yellow)'],

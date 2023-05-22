@@ -5,6 +5,9 @@ describe('plugin/backgroundClip', () => {
   assertTestCases(
     backgroundClip,
     [
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['not-background-clip', 'text', undefined],
       ['background-clip', 'not-text', undefined],
       ['background-clip', 'text', [

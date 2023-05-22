@@ -30,8 +30,8 @@ export const flexFlow: Plugin = (property, value) => {
      * `flex-flow: row wrap-reverse` I'm _pretty_ sure this isn't meant
      * to have a box-orientation of reverse.
      */
-    orientation = value.indexOf('row') === -1 ? 'vertical' : 'horizontal';
-    boxDirection = value.indexOf('reverse') === -1 ? 'normal' : 'reverse';
+    orientation = (typeof value === 'string' && value.indexOf('row') === -1) ? 'vertical' : 'horizontal';
+    boxDirection = (typeof value === 'string' && value.indexOf('reverse') === -1) ? 'normal' : 'reverse';
   }
 
   return [

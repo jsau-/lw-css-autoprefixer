@@ -6,6 +6,9 @@ describe('plugin/alignContent', () => {
     alignContent,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['align-content', 'auto', [
         ['-webkit-align-content', 'auto'],
         ['-ms-flex-line-pack', 'auto'],

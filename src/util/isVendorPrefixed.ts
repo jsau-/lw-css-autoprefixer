@@ -1,3 +1,4 @@
+import type { CSSPropertyValue } from '..';
 import { vendorPrefixes } from './vendorPrefixes';
 
 /**
@@ -12,16 +13,20 @@ import { vendorPrefixes } from './vendorPrefixes';
  * isVendorPrefixed('-moz-hello-world');
  * ```
  *
- * @param str - Property to check to see if it begins with a standard
+ * @param propertyValue - Property to check to see if it begins with a standard
  * vendor prefix.
  * @returns Is the provided property prefixed with a standard vendor prefix?
  */
-export const isVendorPrefixed = (str: string) => {
+export const isVendorPrefixed = (propertyValue: CSSPropertyValue) => {
+  if (!propertyValue || typeof propertyValue !== 'string') {
+    return false;
+  }
+
   const allPrefixes = Object.keys(vendorPrefixes).map(
     (pfx) => vendorPrefixes[pfx as keyof typeof vendorPrefixes],
   );
 
   const regexp = new RegExp(`^${allPrefixes.join('|')}`);
 
-  return regexp.test(str);
+  return regexp.test(propertyValue);
 };

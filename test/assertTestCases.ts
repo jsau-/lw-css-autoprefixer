@@ -1,6 +1,6 @@
-import { CSSDeclaration, Plugin } from '../src/prefixer';
+import { CSSDeclaration, CSSPropertyValue, Plugin } from '../src/prefixer';
 
-type TestCases = [property: string, value: string, expect: CSSDeclaration[] | undefined][];
+type TestCases = [property: string, value: CSSPropertyValue, expect: CSSDeclaration[] | undefined][];
 
 export const assertTestCases = (plugin: Plugin, testCases: TestCases) => {
   test.each(testCases)(

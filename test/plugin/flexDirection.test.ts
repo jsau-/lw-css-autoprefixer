@@ -6,6 +6,9 @@ describe('plugin/flexDirection', () => {
     flexDirection,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['flex-direction', 'auto', [
         ['-webkit-box-orient', 'vertical'],
         ['-webkit-box-direction', 'normal'],

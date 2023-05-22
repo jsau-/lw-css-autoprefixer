@@ -15,8 +15,8 @@ export const flexDirection: Plugin = (property, value) => {
     orientation = 'vertical';
     boxDirection = 'normal';
   } else {
-    orientation = value.indexOf('row') === -1 ? 'vertical' : 'horizontal';
-    boxDirection = value.indexOf('reverse') === -1 ? 'normal' : 'reverse';
+    orientation = (typeof value === 'string' && value.indexOf('row') === -1) ? 'vertical' : 'horizontal';
+    boxDirection = (typeof value === 'string' && value.indexOf('reverse') === -1) ? 'normal' : 'reverse';
   }
 
   return [
