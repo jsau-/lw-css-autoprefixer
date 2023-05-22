@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -144,8 +144,32 @@
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -196,37 +220,50 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">303x</span>
+<span class="cline-any cline-yes">315x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">303x</span>
+<span class="cline-any cline-yes">315x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">303x</span>
-<span class="cline-any cline-yes">107x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6580x</span>
-<span class="cline-any cline-yes">10149x</span>
-<span class="cline-any cline-yes">10149x</span>
+<span class="cline-any cline-yes">315x</span>
+<span class="cline-any cline-yes">110x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6586x</span>
+<span class="cline-any cline-yes">10155x</span>
+<span class="cline-any cline-yes">6586x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">303x</span>
-<span class="cline-any cline-yes">207x</span>
+<span class="cline-any cline-yes">10155x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">315x</span>
+<span class="cline-any cline-yes">213x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">303x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">303x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">315x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">315x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { PropertyPrefixes } from './propertyPrefixes';
 import { addVendorPrefixes } from './util/addVendorPrefixes';
+&nbsp;
+/**
+ * The type of a value for a CSS property declaration. In the strictest sense
+ * we'd expect this to be of type string, however it's entirely plausible that
+ * an implementing library may support working with null, undefined, numeric,
+ * or other arbitrary types which are transformed. In the interest of ensuring
+ * compatibility with whatever users throw into this, let's just say for now
+ * that _any_ value type is expected, and our function plugins _must_ handle
+ * whatever junky input they're thrown.
+ */
+export type CSSPropertyValue = unknown;
 &nbsp;
 /**
  * A declaration of a CSS property and value. Within this library we work with
@@ -234,7 +271,7 @@ import { addVendorPrefixes } from './util/addVendorPrefixes';
  * CSS properties - for example `display: flex` may have many prefixed
  * representations all using the property name `display`.
  */
-export type CSSDeclaration = [property: string, value: string];
+export type CSSDeclaration = [property: string, value: CSSPropertyValue];
 &nbsp;
 /**
  * A function which processes a given CSS property and value, and returns any
@@ -244,7 +281,7 @@ export type CSSDeclaration = [property: string, value: string];
  * CSS declarations will be ordered with the lowest priority declaration first,
  * and the highest priority declaration last.
  */
-export type Plugin = (property: string, value: string) =&gt; CSSDeclaration[] | undefined;
+export type Plugin = (property: string, value: CSSPropertyValue) =&gt; CSSDeclaration[] | undefined;
 &nbsp;
 /**
  * Create a prefixer function using a set of plugins, and static property
@@ -276,8 +313,8 @@ export type Plugin = (property: string, value: string) =&gt; CSSDeclaration[] | 
 export const prefixer = (
   plugins: Plugin[],
   propertyPrefixes: PropertyPrefixes,
-) =&gt; (property: string, value: string): CSSDeclaration[] =&gt; {
-  let toReturn: [string, string][] = [];
+) =&gt; (property: string, value: CSSPropertyValue): CSSDeclaration[] =&gt; {
+  let toReturn: [string, CSSPropertyValue][] = [];
 &nbsp;
   let prefixedNames: string[] = [];
 &nbsp;
@@ -286,7 +323,9 @@ export const prefixer = (
   }
 &nbsp;
   for (const plugin of plugins) {
-    for (const [pluginProperty, pluginValue] of (toReturn.length ? toReturn : [[property, value]])) {
+    for (const [pluginProperty, pluginValue] of (
+      toReturn.length ? toReturn : [[property, value]] as CSSDeclaration[]
+    )) {
       toReturn = toReturn.concat(
         plugin(pluginProperty, pluginValue) || [],
       );
@@ -313,7 +352,7 @@ export const prefixer = (
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-09-11T20:50:50.014Z
+                at 2023-05-22T22:46:17.485Z
             </div>
         <script src="../prettify.js"></script>
         <script>
