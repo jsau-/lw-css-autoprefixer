@@ -6,6 +6,9 @@ describe('plugin/alignSelf', () => {
     alignSelf,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['align-self', 'auto', [
         ['-webkit-align-self', 'auto'],
         ['-ms-flex-item-align', 'auto'],

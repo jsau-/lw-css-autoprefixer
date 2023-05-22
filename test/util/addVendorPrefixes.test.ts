@@ -39,4 +39,16 @@ describe('util/addVendorPrefixes', () => {
       '-webkit-foo',
     ]);
   });
+
+  it('Prefixes a numeric value', () => {
+    expect(addVendorPrefixes(100, Vendor.moz)).toEqual(['-moz-100']);
+  });
+
+  it('Prefixes a null value', () => {
+    expect(addVendorPrefixes(null, Vendor.moz)).toEqual(['-moz-']);
+  });
+
+  it('Prefixes an undefined value', () => {
+    expect(addVendorPrefixes(undefined, Vendor.moz)).toEqual(['-moz-']);
+  });
 });

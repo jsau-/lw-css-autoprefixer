@@ -6,7 +6,7 @@ import { Vendor } from '../Vendor';
 const regexp = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/gi;
 
 export const gradient: Plugin = (property, value) => {
-  if (isVendorPrefixed(value) || !regexp.test(value)) {
+  if (isVendorPrefixed(value) || typeof value !== 'string' || !regexp.test(value)) {
     return;
   }
 

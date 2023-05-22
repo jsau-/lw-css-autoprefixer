@@ -6,6 +6,12 @@ describe('plugin/justifyContent', () => {
     justifyContent,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
+      ['justify-content', 100, undefined],
+      ['justify-content', null, undefined],
+      ['justify-content', undefined, undefined],
       ['justify-content', 'center', [
         ['-webkit-box-pack', 'center'],
         ['-webkit-justify-content', 'center'],

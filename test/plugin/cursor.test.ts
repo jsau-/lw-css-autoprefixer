@@ -6,6 +6,9 @@ describe('plugin/cursor', () => {
     cursor,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['cursor', 'inherit', undefined],
       ['cursor', 'initial', undefined],
       ['cursor', 'unset', undefined],

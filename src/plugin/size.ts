@@ -24,7 +24,10 @@ export const valueReplacements: Record<string, 1> = {
 
 export const size: Plugin = (property, value) => {
   const shouldPrefixProperty = !!propertiesThatPrefixProperty[property];
-  const shouldPrefixValue = !!propertiesThatPrefixValue[property] && !!valueReplacements[value];
+  
+  const shouldPrefixValue = !!propertiesThatPrefixValue[property] &&
+    typeof value === 'string' &&
+    !!valueReplacements[value];
 
   if (shouldPrefixProperty) {
     return addVendorPrefixes(property, Vendor.moz_wk).map((prefixedProperty) => [prefixedProperty, value]);

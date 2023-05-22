@@ -6,6 +6,9 @@ describe('plugin/display', () => {
     display,
     [
       ['foo', 'flex', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['display', 'inherit', undefined],
       ['display', 'flex', [
         ['display', '-webkit-box'],

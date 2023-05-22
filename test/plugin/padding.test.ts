@@ -6,6 +6,9 @@ describe('plugin/padding', () => {
     padding,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['padding-block-end', 'foo', [['-webkit-padding-after', 'foo']]],
       ['padding-block-start', 'foo', [['-webkit-padding-before', 'foo']]],
       ['padding-inline-end', 'foo', [

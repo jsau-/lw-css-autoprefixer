@@ -6,6 +6,9 @@ describe('plugin/size', () => {
     size,
     [
       ['foo', 'bar', undefined],
+      ['foo', 100, undefined],
+      ['foo', null, undefined],
+      ['foo', undefined, undefined],
       ['height', '100px', undefined],
       ['height', 'inherit', undefined],
       ['height', 'unset', undefined],
